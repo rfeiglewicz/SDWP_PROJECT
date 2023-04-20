@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xaxivdma_example_intr_1" location="C:/Vitis_projects/2022_1/test_hdmi_pattern/xaxivdma_example_intr_1" platform="C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="xaxivdma_example_intr_1_system" sysConfig="design_1_wrapper" runtime="C/C++" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="71ec96cf4737ae67fc8cd5bea5d92ebb">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1999103926" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.412514854" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

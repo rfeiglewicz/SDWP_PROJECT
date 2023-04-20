@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="scw_hwspec" value="C:\Vivado_projects\2022_1\hdmi_pattern_gen_pipline"/>
+	<item key="scw_hwspec_file_selection" value="C:\Vitis_projects\2022_1\test_hdmi_pattern_vdma_1"/>
+</section>

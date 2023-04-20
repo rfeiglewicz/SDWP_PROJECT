@@ -1,0 +1,18 @@
+2023-04-16T12:33:38.211559200255-12:33:38 **** Incremental Build of configuration Debug for project pattern_v2 ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building target: pattern_v2.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "pattern_v2.elf"  ./src/helloworld.o ./src/platform.o ./src/vdma_my_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000/pattern_v234-1-1multiple definition of `vdma_context'; ./src/helloworld.o:C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:34: first defined here2-c:/xilinx/vitis/2022.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/11.2.0/real-ld.exe: ./src/vdma_my_api.o:C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:34: multiple definition of `vdma_context'; ./src/helloworld.o:C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:34: first defined here
+000-c:/xilinx/vitis/2022.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/11.2.0/real-ld.exe: ./src/vdma_my_api.o: in function `run_triple_buffer':
+000/pattern_v2/src/vdma_my_api.c184-1-1multiple definition of `run_triple_buffer'; ./src/helloworld.o:C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:184: first defined here2-C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:184: multiple definition of `run_triple_buffer'; ./src/helloworld.o:C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\Debug/../src/vdma_my_api.c:184: first defined here
+000-collect2.exe: error: ld returned 1 exit status
+000/pattern_v20-1-1make[1]: *** [makefile:43: pattern_v2.elf] Error 12-make[1]: *** [makefile:43: pattern_v2.elf] Error 1
+000/pattern_v20-1-1make: *** [makefile:34: all] Error 22-make: *** [makefile:34: all] Error 2
+00255-
+12:33:38 Build Finished (took 277ms)
+

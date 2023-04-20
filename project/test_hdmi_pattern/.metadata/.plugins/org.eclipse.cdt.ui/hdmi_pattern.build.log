@@ -1,0 +1,7 @@
+16:35:57 **** Clean-only build of configuration Debug for project hdmi_pattern ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  hdmi_pattern.elf.size  hdmi_pattern.elf
+' '
+
+16:35:57 Build Finished (took 159ms)
+
