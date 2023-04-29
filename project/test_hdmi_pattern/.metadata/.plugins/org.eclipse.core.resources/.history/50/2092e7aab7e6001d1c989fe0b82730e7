@@ -1,0 +1,7 @@
+#ifndef __VDMA_MY_API_
+#define __VDMA_MY_API_
+
+/***************************** Include Files *********************************/
+#include "xaxivdma.h"
+#include "xparameters.h"
+#include "xil_exception.h"

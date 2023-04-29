@@ -1,32 +1,4 @@
-/******************** Include files **********************************/
-#include "xaxivdma.h"
-#include "xparameters.h"
-#include "xil_exception.h"
-
-typedef struct vdma_handle
-{
-	/* The device ID of the VDMA */
-	unsigned int device_id;
-	/* The state variable to keep track if the initialization is done*/
-	unsigned int init_done;
-	/** The XAxiVdma driver instance data. */
-	XAxiVdma* InstancePtr;
-	/* The XAxiVdma_DmaSetup structure contains all the necessary information to
-	 * start a frame write or read. */
-	XAxiVdma_DmaSetup ReadCfg;
-	XAxiVdma_DmaSetup WriteCfg;
-	/* Horizontal size of frame */
-	unsigned int hsize;
-	/* Vertical size of frame */
-	unsigned int vsize;
-	/* Buffer address from where read and write will be done by VDMA */
-	unsigned int buffer_address;
-	/* Flag to tell VDMA to interrupt on frame completion*/
-	unsigned int enable_frm_cnt_intr;
-	/* The counter to tell VDMA on how many frames the interrupt should happen*/
-	unsigned int number_of_frame_count;
-}vdma_handle;
-
+#include"vdma_my_api.h"
 
 /*
  * Device related constants. These need to defined as per the HW svdma_contextystem.
@@ -34,8 +6,7 @@ typedef struct vdma_handle
 vdma_handle vdma_context ;
 static unsigned int context_init=0;
 
-
-static int ReadSetup(vdma_handle *vdma_context)
+int ReadSetup(vdma_handle *vdma_context)
 {
 	int Index;
 	u32 Addr;
@@ -93,7 +64,7 @@ static int ReadSetup(vdma_handle *vdma_context)
 }
 
 
-static int WriteSetup(vdma_handle *vdma_context)
+int WriteSetup(vdma_handle *vdma_context)
 {
 	int Index;
 	u32 Addr;
@@ -156,7 +127,7 @@ static int WriteSetup(vdma_handle *vdma_context)
 }
 
 
-static int StartTransfer(XAxiVdma *InstancePtr)
+int StartTransfer(XAxiVdma *InstancePtr)
 {
 	int Status;
 	/* Start the write channel of VDMA */
@@ -179,7 +150,7 @@ static int StartTransfer(XAxiVdma *InstancePtr)
 
 
 
-int run_triple_buffer(XAxiVdma* InstancePtr, int DeviceId, int hsize,
+int configure_vdma(XAxiVdma* InstancePtr, int DeviceId, int hsize,
 		int vsize, int buf_base_addr, int number_frame_count,
 		int enable_frm_cnt_intr)
 {
@@ -269,35 +240,24 @@ int run_triple_buffer(XAxiVdma* InstancePtr, int DeviceId, int hsize,
 		XAxiVdma_SetFrameCounter(vdma_context.InstancePtr,&FrameCfgPtr);
 		/* Enable DMA read and write channel interrupts. The configuration for interrupt
 		 * controller will be done by application	 */
-//		XAxiVdma_IntrEnable(vdma_context.InstancePtr,
-//				XAXIVDMA_IXR_ERROR_MASK |
-//				XAXIVDMA_IXR_FRMCNT_MASK,XAXIVDMA_WRITE);
-//		XAxiVdma_IntrEnable(vdma_context.InstancePtr,
-//				XAXIVDMA_IXR_ERROR_MASK |
-//				XAXIVDMA_IXR_FRMCNT_MASK,XAXIVDMA_READ);
+
+		XAxiVdma_IntrEnable(InstancePtr, XAXIVDMA_IXR_COMPLETION_MASK, XAXIVDMA_READ);
+		XAxiVdma_IntrEnable(InstancePtr, XAXIVDMA_IXR_COMPLETION_MASK, XAXIVDMA_WRITE);
+
 	} else	{
 //		/* Enable DMA read and write channel interrupts. The configuration for interrupt
 //		* controller will be done by application	 */
-//		XAxiVdma_IntrEnable(vdma_context.InstancePtr,
-//					XAXIVDMA_IXR_ERROR_MASK,XAXIVDMA_WRITE);
-//		XAxiVdma_IntrEnable(vdma_context.InstancePtr,
-//					XAXIVDMA_IXR_ERROR_MASK ,XAXIVDMA_READ);
+
 	}
 
-//	/* Start the DMA engine to transfer */
-//	Status = StartTransfer(vdma_context.InstancePtr);
-//	if (Status != XST_SUCCESS) {
-//		if(Status == XST_VDMA_MISMATCH_ERROR)
-//			xil_printf("DMA Mismatch Error\r\n");
-//		return XST_FAILURE;
-//	}
+
 
 
 	return XST_SUCCESS;
 }
 
 
-int start_dma_cust(){
+int run_vdma(){
 	/* Start the DMA engine to transfer */
 	int Status = StartTransfer(vdma_context.InstancePtr);
 	if (Status != XST_SUCCESS) {
@@ -305,7 +265,7 @@ int start_dma_cust(){
 			xil_printf("DMA Mismatch Error\r\n");
 		return XST_FAILURE;
 	}
-
+	return XST_SUCCESS;
 }
 
 void run_save(){

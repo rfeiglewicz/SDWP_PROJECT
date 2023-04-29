@@ -1,4 +1,4 @@
-17:21:15 **** Incremental Build of configuration Debug for project vdma_1 ****
+19:45:00 **** Build of configuration Debug for project vdma_1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -14,5 +14,5 @@ compilation terminated.
 make[1]: *** [src/subdir.mk:26: src/vdma.o] Error 1
 make: *** [makefile:34: all] Error 2
 
-17:21:15 Build Finished (took 281ms)
+19:45:00 Build Finished (took 437ms)
 

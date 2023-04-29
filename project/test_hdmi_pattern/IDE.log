@@ -4704,3 +4704,684 @@ con
 18:56:33 INFO  : Platform repository initialization has completed.
 18:56:33 INFO  : Successfully done query RDI_DATADIR 
 18:56:33 INFO  : Registering command handlers for Vitis TCF services
+18:12:37 DEBUG : Logs will be stored at 'C:/Vitis_projects/2022_1/test_hdmi_pattern/IDE.log'.
+18:12:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vitis_projects\2022_1\test_hdmi_pattern\temp_xsdb_launch_script.tcl
+18:12:40 INFO  : XSCT server has started successfully.
+18:12:40 INFO  : plnx-install-location is set to ''
+18:12:40 INFO  : Successfully done setting XSCT server connection channel  
+18:12:40 INFO  : Successfully done setting workspace for the tool. 
+18:12:40 INFO  : Platform repository initialization has completed.
+18:12:40 INFO  : Successfully done query RDI_DATADIR 
+18:12:41 INFO  : Registering command handlers for Vitis TCF services
+18:13:25 INFO  : Projects exported to 'C:\Users\radzi\Documents\git_sdwup\SDWP_PROJECT\project\vitis_export_archive_test_pattern.ide.zip'
+19:44:07 DEBUG : Logs will be stored at 'C:/Vitis_projects/2022_1/test_hdmi_pattern/IDE.log'.
+19:44:08 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vitis_projects\2022_1\test_hdmi_pattern\temp_xsdb_launch_script.tcl
+19:44:11 INFO  : Platform repository initialization has completed.
+19:44:12 INFO  : Registering command handlers for Vitis TCF services
+19:44:13 INFO  : XSCT server has started successfully.
+19:44:13 INFO  : plnx-install-location is set to ''
+19:44:17 INFO  : Successfully done setting XSCT server connection channel  
+19:44:17 INFO  : Successfully done query RDI_DATADIR 
+19:44:17 INFO  : Successfully done setting workspace for the tool. 
+19:44:55 INFO  : Result from executing command 'getProjects': design_1_wrapper
+19:44:55 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+19:44:55 INFO  : Checking for BSP changes to sync application flags for project 'vdma_1'...
+19:45:00 INFO  : The hardware specification used by project 'vdma_1' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:45:00 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\vdma_1\_ide\bitstream\design_1_wrapper_ila_v2.bit' stored in project is removed.
+19:45:00 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\vdma_1\_ide\bitstream' in project 'vdma_1'.
+19:45:00 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\vdma_1\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:45:06 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\vdma_1\_ide\psinit' in project 'vdma_1'.
+16:26:00 DEBUG : Logs will be stored at 'C:/Vitis_projects/2022_1/test_hdmi_pattern/IDE.log'.
+16:26:00 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vitis_projects\2022_1\test_hdmi_pattern\temp_xsdb_launch_script.tcl
+16:26:03 INFO  : Registering command handlers for Vitis TCF services
+16:26:03 INFO  : Platform repository initialization has completed.
+16:26:03 INFO  : XSCT server has started successfully.
+16:26:06 INFO  : Successfully done setting XSCT server connection channel  
+16:26:06 INFO  : plnx-install-location is set to ''
+16:26:06 INFO  : Successfully done query RDI_DATADIR 
+16:26:06 INFO  : Successfully done setting workspace for the tool. 
+16:26:54 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:27:16 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:27:16 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:27:30 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+16:27:35 INFO  : The hardware specification used by project 'pattern_v2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:27:35 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream\design_1_wrapper_2_buffer_vdma_v1.bit' stored in project is removed.
+16:27:35 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream' in project 'pattern_v2'.
+16:27:35 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit\ps7_init.tcl' stored in project is removed.
+16:27:39 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit' in project 'pattern_v2'.
+16:28:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:28:25 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+16:28:25 INFO  : 'jtag frequency' command is executed.
+16:28:25 INFO  : Context for 'APU' is selected.
+16:28:25 INFO  : System reset is completed.
+16:28:28 INFO  : 'after 3000' command is executed.
+16:28:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+16:28:31 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_150_mhz_pattern.bit"
+16:28:31 INFO  : Context for 'APU' is selected.
+16:28:31 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_150_mhz_pattern.xsa'.
+16:28:31 INFO  : 'configparams force-mem-access 1' command is executed.
+16:28:31 INFO  : Context for 'APU' is selected.
+16:28:31 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+16:28:31 INFO  : 'ps7_init' command is executed.
+16:28:31 INFO  : 'ps7_post_config' command is executed.
+16:28:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:28:31 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:28:31 INFO  : 'configparams force-mem-access 0' command is executed.
+16:28:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_150_mhz_pattern.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_150_mhz_pattern.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:28:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:28:31 INFO  : 'con' command is executed.
+16:28:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:28:31 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+16:29:38 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:29:38 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:29:39 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:29:43 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+16:29:48 INFO  : The hardware specification used by project 'pattern_v2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:29:48 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream\design_1_wrapper_150_mhz_pattern.bit' stored in project is removed.
+16:29:48 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream' in project 'pattern_v2'.
+16:29:48 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit\ps7_init.tcl' stored in project is removed.
+16:29:53 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit' in project 'pattern_v2'.
+16:30:03 INFO  : Disconnected from the channel tcfchan#3.
+16:30:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:30:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+16:30:03 INFO  : 'jtag frequency' command is executed.
+16:30:03 INFO  : Context for 'APU' is selected.
+16:30:03 INFO  : System reset is completed.
+16:30:06 INFO  : 'after 3000' command is executed.
+16:30:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+16:30:09 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit"
+16:30:09 INFO  : Context for 'APU' is selected.
+16:30:09 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa'.
+16:30:09 INFO  : 'configparams force-mem-access 1' command is executed.
+16:30:09 INFO  : Context for 'APU' is selected.
+16:30:09 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+16:30:09 INFO  : 'ps7_init' command is executed.
+16:30:09 INFO  : 'ps7_post_config' command is executed.
+16:30:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:30:09 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:30:09 INFO  : 'configparams force-mem-access 0' command is executed.
+16:30:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:30:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:30:09 INFO  : 'con' command is executed.
+16:30:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:30:09 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+16:46:57 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:47:15 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:47:15 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:47:20 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+16:47:25 INFO  : The hardware specification used by project 'pattern_v2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:47:25 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream\design_1_wrapper_2_buffer_vdma_v1.bit' stored in project is removed.
+16:47:25 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream' in project 'pattern_v2'.
+16:47:25 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit\ps7_init.tcl' stored in project is removed.
+16:47:31 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit' in project 'pattern_v2'.
+16:47:42 INFO  : Disconnected from the channel tcfchan#6.
+16:47:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:47:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+16:47:42 INFO  : 'jtag frequency' command is executed.
+16:47:42 INFO  : Context for 'APU' is selected.
+16:47:42 INFO  : System reset is completed.
+16:47:45 INFO  : 'after 3000' command is executed.
+16:47:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+16:47:48 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+16:47:48 INFO  : Context for 'APU' is selected.
+16:47:48 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+16:47:48 INFO  : 'configparams force-mem-access 1' command is executed.
+16:47:48 INFO  : Context for 'APU' is selected.
+16:47:48 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+16:47:48 INFO  : 'ps7_init' command is executed.
+16:47:48 INFO  : 'ps7_post_config' command is executed.
+16:47:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:47:48 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:47:48 INFO  : 'configparams force-mem-access 0' command is executed.
+16:47:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:47:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:47:48 INFO  : 'con' command is executed.
+16:47:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:47:48 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+17:32:50 INFO  : Disconnected from the channel tcfchan#9.
+18:47:16 DEBUG : Logs will be stored at 'C:/Vitis_projects/2022_1/test_hdmi_pattern/IDE.log'.
+18:47:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Vitis_projects\2022_1\test_hdmi_pattern\temp_xsdb_launch_script.tcl
+18:47:19 INFO  : Registering command handlers for Vitis TCF services
+18:47:19 INFO  : Platform repository initialization has completed.
+18:47:20 INFO  : XSCT server has started successfully.
+18:47:23 INFO  : plnx-install-location is set to ''
+18:47:23 INFO  : Successfully done setting XSCT server connection channel  
+18:47:23 INFO  : Successfully done query RDI_DATADIR 
+18:47:23 INFO  : Successfully done setting workspace for the tool. 
+19:24:21 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+19:24:28 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa is already opened
+
+19:32:30 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+19:33:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:33:29 INFO  : 'jtag frequency' command is executed.
+19:33:29 INFO  : Context for 'APU' is selected.
+19:33:29 INFO  : System reset is completed.
+19:33:32 INFO  : 'after 3000' command is executed.
+19:33:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:33:35 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+19:33:35 INFO  : Context for 'APU' is selected.
+19:33:35 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+19:33:35 INFO  : 'configparams force-mem-access 1' command is executed.
+19:33:35 INFO  : Context for 'APU' is selected.
+19:33:35 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+19:33:35 INFO  : 'ps7_init' command is executed.
+19:33:35 INFO  : 'ps7_post_config' command is executed.
+19:33:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:33:35 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:33:35 INFO  : 'configparams force-mem-access 0' command is executed.
+19:33:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:33:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:33:36 INFO  : 'con' command is executed.
+19:33:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:33:36 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+19:34:59 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+19:35:13 INFO  : Result from executing command 'getProjects': design_1_wrapper
+19:35:13 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+19:35:38 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+19:35:43 INFO  : The hardware specification used by project 'pattern_v2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:35:43 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream\design_1_wrapper_hdmi_75Mhz_v1.bit' stored in project is removed.
+19:35:43 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream' in project 'pattern_v2'.
+19:35:43 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:35:47 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit' in project 'pattern_v2'.
+19:36:00 INFO  : Disconnected from the channel tcfchan#2.
+19:36:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:36:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:36:00 INFO  : 'jtag frequency' command is executed.
+19:36:00 INFO  : Context for 'APU' is selected.
+19:36:00 INFO  : System reset is completed.
+19:36:03 INFO  : 'after 3000' command is executed.
+19:36:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:36:06 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit"
+19:36:06 INFO  : Context for 'APU' is selected.
+19:36:06 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa'.
+19:36:06 INFO  : 'configparams force-mem-access 1' command is executed.
+19:36:06 INFO  : Context for 'APU' is selected.
+19:36:06 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+19:36:06 INFO  : 'ps7_init' command is executed.
+19:36:06 INFO  : 'ps7_post_config' command is executed.
+19:36:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:36:06 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:36:06 INFO  : 'configparams force-mem-access 0' command is executed.
+19:36:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:36:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:36:06 INFO  : 'con' command is executed.
+19:36:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:36:06 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+19:37:25 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+19:37:33 INFO  : Disconnected from the channel tcfchan#5.
+19:37:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:37:34 INFO  : 'jtag frequency' command is executed.
+19:37:34 INFO  : Context for 'APU' is selected.
+19:37:34 INFO  : System reset is completed.
+19:37:37 INFO  : 'after 3000' command is executed.
+19:37:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:37:39 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit"
+19:37:39 INFO  : Context for 'APU' is selected.
+19:37:39 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa'.
+19:37:39 INFO  : 'configparams force-mem-access 1' command is executed.
+19:37:39 INFO  : Context for 'APU' is selected.
+19:37:39 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+19:37:39 INFO  : 'ps7_init' command is executed.
+19:37:39 INFO  : 'ps7_post_config' command is executed.
+19:37:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:39 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:37:40 INFO  : 'configparams force-mem-access 0' command is executed.
+19:37:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:37:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:40 INFO  : 'con' command is executed.
+19:37:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:37:40 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+19:38:19 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+19:38:28 INFO  : Disconnected from the channel tcfchan#7.
+19:38:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:38:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:38:28 INFO  : 'jtag frequency' command is executed.
+19:38:28 INFO  : Context for 'APU' is selected.
+19:38:28 INFO  : System reset is completed.
+19:38:31 INFO  : 'after 3000' command is executed.
+19:38:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:38:33 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit"
+19:38:33 INFO  : Context for 'APU' is selected.
+19:38:33 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa'.
+19:38:33 INFO  : 'configparams force-mem-access 1' command is executed.
+19:38:33 INFO  : Context for 'APU' is selected.
+19:38:33 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+19:38:34 INFO  : 'ps7_init' command is executed.
+19:38:34 INFO  : 'ps7_post_config' command is executed.
+19:38:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:38:34 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:38:34 INFO  : 'configparams force-mem-access 0' command is executed.
+19:38:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:38:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:38:34 INFO  : 'con' command is executed.
+19:38:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:38:34 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+19:39:04 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+19:39:19 INFO  : Result from executing command 'getProjects': design_1_wrapper
+19:39:19 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+19:39:33 INFO  : Disconnected from the channel tcfchan#9.
+19:39:33 INFO  : The hardware specification used by project 'pattern_v2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:39:36 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream\design_1_wrapper_2_buffer_vdma_v1.bit' stored in project is removed.
+19:39:36 INFO  : The updated bitstream files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\bitstream' in project 'pattern_v2'.
+19:39:36 INFO  : The file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:39:40 INFO  : The updated ps init files are copied from platform to folder 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2\_ide\psinit' in project 'pattern_v2'.
+19:39:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:39:41 INFO  : 'jtag frequency' command is executed.
+19:39:41 INFO  : Context for 'APU' is selected.
+19:39:41 INFO  : System reset is completed.
+19:39:44 INFO  : 'after 3000' command is executed.
+19:39:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:39:44 ERROR : couldn't open "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit": no such file or directory
+19:39:44 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit": no such file or directory
+19:39:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+19:39:44 ERROR : couldn't open "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit": no such file or directory
+19:39:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+19:39:57 INFO  : 'jtag frequency' command is executed.
+19:39:57 INFO  : Context for 'APU' is selected.
+19:39:57 INFO  : System reset is completed.
+19:40:00 INFO  : 'after 3000' command is executed.
+19:40:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+19:40:03 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+19:40:03 INFO  : Context for 'APU' is selected.
+19:40:03 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+19:40:03 INFO  : 'configparams force-mem-access 1' command is executed.
+19:40:03 INFO  : Context for 'APU' is selected.
+19:40:03 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+19:40:03 INFO  : 'ps7_init' command is executed.
+19:40:03 INFO  : 'ps7_post_config' command is executed.
+19:40:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:40:03 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:40:03 INFO  : 'configparams force-mem-access 0' command is executed.
+19:40:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:40:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:40:03 INFO  : 'con' command is executed.
+19:40:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:40:03 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+20:05:52 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:06:12 INFO  : Disconnected from the channel tcfchan#11.
+20:06:24 ERROR : Unexpected error while testing for AIE type project 
+org.eclipse.core.internal.resources.ResourceException: Resource '/pattern_v2_system' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:145) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:530) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.aie.core.util.AIEProjectUtils.isAIEProject(AIEProjectUtils.java:265) ~[?:?]
+	at com.xilinx.sdx.aie.core.util.AIEUtilityTester.test(AIEUtilityTester.java:23) ~[?:?]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65) ~[org.eclipse.core.expressions_3.6.700.v20200212-1751.jar:?]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103) ~[org.eclipse.core.expressions_3.6.700.v20200212-1751.jar:?]
+	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.isCoreExpressionVisible(ContributionsAnalyzer.java:281) ~[?:?]
+	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.isVisible(ContributionsAnalyzer.java:255) ~[?:?]
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarContributionRecord.computeVisibility(ToolBarContributionRecord.java:160) ~[?:?]
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarContributionRecord.updateVisibility(ToolBarContributionRecord.java:74) ~[?:?]
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer$2.changed(ToolBarManagerRenderer.java:514) ~[?:?]
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:108) ~[?:?]
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:364) ~[?:?]
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:379) ~[?:?]
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:703) ~[?:?]
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:139) ~[?:?]
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40) ~[org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:?]
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185) ~[org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:?]
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897) ~[org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:?]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527) ~[org.eclipse.swt.win32.win32.x86_64_3.114.0.v20200304-0601.jar:?]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160) ~[?:?]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) ~[?:?]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049) ~[?:?]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155) ~[org.eclipse.e4.ui.workbench_1.11.200.v20200205-1503.jar:?]
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658) ~[org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:?]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338) [org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar:?]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:?]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154) [org.eclipse.ui.workbench_3.118.0.v20200222-0719.jar:?]
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80) [com.xilinx.ide.application.ui_1.0.0.202204140305.jar:?]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203) [org.eclipse.equinox.app_1.4.400.v20191212-0743.jar:?]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:?]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:?]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:?]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255) [org.eclipse.osgi_3.15.200.v20200214-1600.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657) [org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:?]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594) [org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:?]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447) [org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar:?]
+Caused by: java.lang.Exception: Resource '/pattern_v2_system' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	... 43 more
+20:06:32 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:07:32 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:08:43 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:09:50 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:11:36 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:12:00 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:12:10 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:13:56 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:14:41 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:14:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+20:15:00 INFO  : 'jtag frequency' command is executed.
+20:15:00 INFO  : Context for 'APU' is selected.
+20:15:00 INFO  : System reset is completed.
+20:15:03 INFO  : 'after 3000' command is executed.
+20:15:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+20:15:05 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+20:15:05 INFO  : Context for 'APU' is selected.
+20:15:05 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+20:15:05 INFO  : 'configparams force-mem-access 1' command is executed.
+20:15:05 INFO  : Context for 'APU' is selected.
+20:15:05 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+20:15:06 INFO  : 'ps7_init' command is executed.
+20:15:06 INFO  : 'ps7_post_config' command is executed.
+20:15:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:15:06 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:15:06 INFO  : 'configparams force-mem-access 0' command is executed.
+20:15:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:15:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:15:06 INFO  : 'con' command is executed.
+20:15:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:15:06 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+20:19:49 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:22:46 INFO  : Checking for BSP changes to sync application flags for project 'pattern_v2'...
+20:22:54 INFO  : Disconnected from the channel tcfchan#16.
+20:22:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:54 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+20:22:54 INFO  : 'jtag frequency' command is executed.
+20:22:54 INFO  : Context for 'APU' is selected.
+20:22:54 INFO  : System reset is completed.
+20:22:57 INFO  : 'after 3000' command is executed.
+20:22:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+20:23:00 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+20:23:00 INFO  : Context for 'APU' is selected.
+20:23:00 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+20:23:00 INFO  : 'configparams force-mem-access 1' command is executed.
+20:23:00 INFO  : Context for 'APU' is selected.
+20:23:00 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+20:23:00 INFO  : 'ps7_init' command is executed.
+20:23:00 INFO  : 'ps7_post_config' command is executed.
+20:23:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:00 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:23:00 INFO  : 'configparams force-mem-access 0' command is executed.
+20:23:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:23:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:00 INFO  : 'con' command is executed.
+20:23:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:23:00 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+20:23:38 INFO  : Disconnected from the channel tcfchan#19.
+20:23:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B04DAAA' is selected.
+20:23:38 INFO  : 'jtag frequency' command is executed.
+20:23:38 INFO  : Context for 'APU' is selected.
+20:23:38 INFO  : System reset is completed.
+20:23:42 INFO  : 'after 3000' command is executed.
+20:23:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}' command is executed.
+20:23:44 INFO  : Device configured successfully with "C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit"
+20:23:44 INFO  : Context for 'APU' is selected.
+20:23:44 INFO  : Hardware design and registers information is loaded from 'C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa'.
+20:23:44 INFO  : 'configparams force-mem-access 1' command is executed.
+20:23:44 INFO  : Context for 'APU' is selected.
+20:23:44 INFO  : Sourcing of 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl' is done.
+20:23:44 INFO  : 'ps7_init' command is executed.
+20:23:44 INFO  : 'ps7_post_config' command is executed.
+20:23:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:44 INFO  : The application 'C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:23:44 INFO  : 'configparams force-mem-access 0' command is executed.
+20:23:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/Debug/pattern_v2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:23:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:44 INFO  : 'con' command is executed.
+20:23:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:23:44 INFO  : Launch script is exported to file 'C:\Vitis_projects\2022_1\test_hdmi_pattern\pattern_v2_system\_ide\scripts\systemdebugger_pattern_v2_system_standalone.tcl'
+20:24:41 INFO  : Projects exported to 'C:\Users\radzi\Documents\git_sdwup\SDWP_PROJECT\project\vitis_export_archive.ide.zip'
+20:25:32 INFO  : Projects exported to 'C:\Users\radzi\Documents\git_sdwup\SDWP_PROJECT\project\vitis_export_archive_test_pattern.ide.zip'

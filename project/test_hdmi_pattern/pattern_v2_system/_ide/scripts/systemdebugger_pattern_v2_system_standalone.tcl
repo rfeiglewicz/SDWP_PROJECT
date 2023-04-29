@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
-fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_2_buffer_vdma_v1.bit
+fpga -file C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/bitstream/design_1_wrapper_hdmi_75Mhz_v1.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_2_buffer_vdma_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper_hdmi_75Mhz_v1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2/_ide/psinit/ps7_init.tcl

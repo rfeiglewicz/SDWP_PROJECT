@@ -1,4 +1,4 @@
-2023-04-16T17:21:15.648441100255-17:21:15 **** Incremental Build of configuration Debug for project vdma_1 ****
+2023-04-24T19:45:00.110652500255-19:45:00 **** Build of configuration Debug for project vdma_1 ****
 000-make all 
 000-make --no-print-directory pre-build
 000-a9-linaro-pre-build-step
@@ -14,5 +14,5 @@
 000/vdma_10-1-1make[1]: *** [src/subdir.mk:26: src/vdma.o] Error 12-make[1]: *** [src/subdir.mk:26: src/vdma.o] Error 1
 000/vdma_10-1-1make: *** [makefile:34: all] Error 22-make: *** [makefile:34: all] Error 2
 00255-
-17:21:15 Build Finished (took 281ms)
+19:45:00 Build Finished (took 437ms)
 

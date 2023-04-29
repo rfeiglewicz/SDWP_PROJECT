@@ -60,3 +60,16 @@ platform generate -domains
 platform active {design_1_wrapper}
 platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_2_buffer_vdma_v1.xsa}
 platform generate -domains 
+platform generate
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_150_mhz_pattern.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_2_buffer_vdma_v1.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_hdmi_75Mhz_v1.xsa}
+platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_2_buffer_vdma_v1.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_hdmi_75Mhz_v1.xsa}
+platform generate -domains 
