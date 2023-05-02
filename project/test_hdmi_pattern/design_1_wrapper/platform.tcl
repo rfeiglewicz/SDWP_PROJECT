@@ -73,3 +73,17 @@ platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/des
 platform generate -domains 
 platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern_vdma_1/design_1_wrapper_hdmi_75Mhz_v1.xsa}
 platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper_3_buffers_v1.xsa}
+platform generate -domains standalone_ps7_cortexa9_0 
+platform clean
+platform generate
+platform active {design_1_wrapper}
+domain create -name {standalone_ps7_cortexa9_1} -display-name {standalone_ps7_cortexa9_1} -os {standalone} -proc {ps7_cortexa9_1} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
+platform write
+domain active {zynq_fsbl}
+domain active {standalone_ps7_cortexa9_0}
+domain active {standalone_ps7_cortexa9_1}
+platform generate -quick
+platform generate -domains standalone_ps7_cortexa9_1 
