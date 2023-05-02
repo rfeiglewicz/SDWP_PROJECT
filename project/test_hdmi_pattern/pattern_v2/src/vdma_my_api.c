@@ -18,7 +18,7 @@ int ReadSetup(vdma_handle *vdma_context)
 	vdma_context->ReadCfg.Stride = vdma_context->hsize;
 	vdma_context->ReadCfg.FrameDelay = 0;  /* This example does not test frame delay */
 
-	vdma_context->ReadCfg.EnableCircularBuf = 1;
+	vdma_context->ReadCfg.EnableCircularBuf = 0;
 	vdma_context->ReadCfg.EnableSync = 0;  /* Gen-Lock */
 
 	vdma_context->ReadCfg.PointNum = 0;
@@ -40,11 +40,10 @@ int ReadSetup(vdma_handle *vdma_context)
 	 */
 	Addr = vdma_context->buffer_address;
 
-	for(Index = 0; Index < /*vdma_context->InstancePtr->MaxNumFrames*/ 4; Index++) {
-		if(Index > 1){
-		vdma_context->ReadCfg.FrameStoreStartAddr[Index-2] = Addr;
+	for(Index = 0; Index < 6; Index++) {
+		if(Index > 2){
+			vdma_context->ReadCfg.FrameStoreStartAddr[Index-3] = Addr;
 		}
-
 		Addr +=  vdma_context->hsize * vdma_context->vsize;
 	}
 
@@ -76,7 +75,7 @@ int WriteSetup(vdma_handle *vdma_context)
 	vdma_context->WriteCfg.Stride = vdma_context->hsize;
 	vdma_context->WriteCfg.FrameDelay = 0;  /* This example does not test frame delay */
 
-	vdma_context->WriteCfg.EnableCircularBuf = 1;
+	vdma_context->WriteCfg.EnableCircularBuf = 0;
 	vdma_context->WriteCfg.EnableSync = 0;  /*  Gen-Lock */
 
 	vdma_context->WriteCfg.PointNum = 0;
@@ -106,9 +105,8 @@ int WriteSetup(vdma_handle *vdma_context)
 	 */
 
 	xil_printf("Start read transfer failed %d\r\n", vdma_context->InstancePtr->MaxNumFrames);
-	for(Index = 0; Index < /*vdma_context->InstancePtr->MaxNumFrames*/ 2; Index++) { //NOTE: added -2
+	for(Index = 0; Index < 3; Index++) { //NOTE: added -2
 		vdma_context->WriteCfg.FrameStoreStartAddr[Index] = Addr;
-
 
 		Addr += (vdma_context->hsize * vdma_context->vsize);
 	}
@@ -250,9 +248,6 @@ int configure_vdma(XAxiVdma* InstancePtr, int DeviceId, int hsize,
 
 	}
 
-
-
-
 	return XST_SUCCESS;
 }
 
@@ -268,13 +263,5 @@ int run_vdma(){
 	return XST_SUCCESS;
 }
 
-void run_save(){
-    for(int i=0; i< (1920*1080*3/4);i++){
-    	u32 temp_val;
-    	temp_val = Xil_In32(vdma_context.WriteCfg.FrameStoreStartAddr[0] + 4*i);
 
-    	Xil_Out32(vdma_context.ReadCfg.FrameStoreStartAddr[0] + 4*i, ~temp_val);
-    	Xil_Out32(vdma_context.ReadCfg.FrameStoreStartAddr[1] + 4*i, ~temp_val);
-    }
-}
 

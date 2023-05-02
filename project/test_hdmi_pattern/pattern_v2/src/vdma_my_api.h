@@ -31,7 +31,7 @@ typedef struct vdma_handle
 }vdma_handle;
 
 
-
+extern vdma_handle vdma_context;
 
 
 int ReadSetup(vdma_handle *vdma_context);

@@ -77,7 +77,17 @@ static void ReadErrorCallBack(void *CallbackRef, u32 Mask);
 static void WriteCallBack(void *CallbackRef, u32 Mask);
 static void WriteErrorCallBack(void *CallbackRef, u32 Mask);
 
+#define FRAME_COUNT 3
 
+static u16 r_current_frame = 0;
+static u16 r_parked = 0;
+static u16 r_en[FRAME_COUNT];
+
+static u16 w_current_frame = 0;
+static u16 w_parked = 0;
+static u16 w_en[FRAME_COUNT];
+
+static u16 proc_current_frame = 2;
 
 /*** Global Variables ***/
 unsigned int srcBuffer = (MEMORY_BASE  + 0x1000000);
@@ -85,67 +95,80 @@ unsigned int srcBuffer = (MEMORY_BASE  + 0x1000000);
 
 static int SetupIntrSystem(XAxiVdma *AxiVdmaPtr, u16 ReadIntrId, u16 WriteIntrId);
 
+void run_save(){
+	xil_printf("[PROC] Starting processing frame %d\r\n", proc_current_frame);
+    for(int i=0; i< (1920*1080*3/4);i++){
+    	u32 temp_val = Xil_In32(vdma_context.WriteCfg.FrameStoreStartAddr[proc_current_frame] + 4*i);
+
+    	Xil_Out32(vdma_context.ReadCfg.FrameStoreStartAddr[proc_current_frame] + 4*i, ~temp_val);
+    }
+    r_en[proc_current_frame] = 1;
+    w_en[proc_current_frame] = 1;
+    xil_printf("[PROC] Finished processing frame %d\r\n", proc_current_frame);
+}
+
 int main()
 {
     int Status;
     init_platform();
 
-       /* TPG Initialization */
-       Status = XV_tpg_Initialize(&tpg_inst, XPAR_V_TPG_0_DEVICE_ID);
-       if(Status!= XST_SUCCESS)
-       {
-       	xil_printf("TPG configuration failed\r\n");
-           return(XST_FAILURE);
-       }
+	/* TPG Initialization */
+	Status = XV_tpg_Initialize(&tpg_inst, XPAR_V_TPG_0_DEVICE_ID);
+	if(Status!= XST_SUCCESS)
+	{
+	xil_printf("TPG configuration failed\r\n");
+	   return(XST_FAILURE);
+	}
 
 
-       //VDMA init
-       	/* Calling the API to configure  VDMA with frame counter interrupt
-       	 * Please note source buffer pointer is being offset a bit */
-       	Status = configure_vdma(&InstancePtr, DMA_DEVICE_ID, 1920, 1080,
-       						srcBuffer, 1, 1);
-       	if (Status != XST_SUCCESS){
-       		xil_printf("Transfer of frames failed with error = %d\r\n",Status);
-       		return XST_FAILURE;
-       	} else {
-       		xil_printf("Transfer of frames started \r\n");
-       	}
+   	//VDMA init
+	/* Calling the API to configure  VDMA with frame counter interrupt
+	 * Please note source buffer pointer is being offset a bit */
+	Status = configure_vdma(&InstancePtr, DMA_DEVICE_ID, 1920, 1080,
+						srcBuffer, 1, 1);
+	if (Status != XST_SUCCESS){
+		xil_printf("Transfer of frames failed with error = %d\r\n",Status);
+		return XST_FAILURE;
+	} else {
+		xil_printf("Transfer of frames started \r\n");
+	}
 
+	//Setup interrupt system and connect call-back's
+	SetupIntrSystem(&InstancePtr, XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR,XPAR_FABRIC_AXI_VDMA_0_S2MM_INTROUT_INTR);
 
+	xil_printf("before start!\r\n");
 
-//Setup interrupt system and connect call-back's
-		SetupIntrSystem(&InstancePtr, XPAR_FABRIC_AXI_VDMA_0_MM2S_INTROUT_INTR,XPAR_FABRIC_AXI_VDMA_0_S2MM_INTROUT_INTR);
+	run_vdma();
 
-	       xil_printf("before start!\r\n");
+	xil_printf("after start!\r\n");
 
-		run_vdma();
+	// Set Resolution to 1920x1080
+	XV_tpg_Set_height(&tpg_inst, 1080);
+	XV_tpg_Set_width(&tpg_inst, 1920);
 
-	       xil_printf("after start!\r\n");
+	// Set Color Space to RGB
+	XV_tpg_Set_colorFormat(&tpg_inst, 0x0);
 
-       // Set Resolution to 1920x1080
-       XV_tpg_Set_height(&tpg_inst, 1080);
-       XV_tpg_Set_width(&tpg_inst, 1920);
+	//Set pattern to color bar
+	XV_tpg_Set_bckgndId(&tpg_inst, XTPG_BKGND_COLOR_BARS);
 
-       // Set Color Space to RGB
-       XV_tpg_Set_colorFormat(&tpg_inst, 0x0);
+	//Start the TPG
+	XV_tpg_EnableAutoRestart(&tpg_inst);
+	XV_tpg_Start(&tpg_inst);
+	xil_printf("TPG started!\r\n");
+	/* End of TPG code*/
 
-       //Set pattern to color bar
-       XV_tpg_Set_bckgndId(&tpg_inst, XTPG_BKGND_COLOR_BARS);
+	for(int i=0;i<100000000; i++){}
+	xil_printf("NOP!\r\n");
 
-       //Start the TPG
-       XV_tpg_EnableAutoRestart(&tpg_inst);
-       XV_tpg_Start(&tpg_inst);
-       xil_printf("TPG started!\r\n");
-       /* End of TPG code*/
-
-       for(int i=0;i<100000000; i++){}
-       xil_printf("NOP!\r\n");
-
-       while(1){
-           run_save();
-       }
-    cleanup_platform();
-    return 0;
+	while(1){
+	   if(w_en[proc_current_frame] == 1 &&  r_en[proc_current_frame] == 1) {
+		   run_save();
+		   proc_current_frame = (proc_current_frame + 1) % FRAME_COUNT;
+	   }
+	}
+	cleanup_platform();
+	return 0;
 }
 
 
@@ -164,11 +187,21 @@ int main()
 ******************************************************************************/
 static void ReadCallBack(void *CallbackRef, u32 Mask)
 {
-	/* User can add his code in this call back function */
-//	xil_printf("Read Call back function is called\r\n");
-	int curr_read_frame = XAxiVdma_CurrFrameStore(&InstancePtr, XAXIVDMA_READ);
-	xil_printf("Read Call back  function is called: number %d \r\n",curr_read_frame);
+	u16 current_frame = XAxiVdma_CurrFrameStore(&InstancePtr, XAXIVDMA_READ);
+	xil_printf("[READ] Stopped reading frame %d, Starting read frame %d\r\n", r_current_frame, current_frame);
+	if(current_frame != r_current_frame) {
+		r_en[r_current_frame] = 1; // Free previous frame
+		r_current_frame = current_frame;
+	}
 
+	u16 next_buffer_index = (r_current_frame + 1) % FRAME_COUNT;
+	if(r_en[next_buffer_index] == 1) {
+		r_en[next_buffer_index] = 0; // Reserve next frame
+		r_parked = 0;
+		vdma_context.ReadCfg.FixedFrameStoreAddr = next_buffer_index;
+	} else {
+		r_parked = 1;
+	}
 }
 
 /*****************************************************************************/
@@ -204,11 +237,21 @@ static void ReadErrorCallBack(void *CallbackRef, u32 Mask)
 ******************************************************************************/
 static void WriteCallBack(void *CallbackRef, u32 Mask)
 {
-	/* User can add his code in this call back function */
-//	xil_printf("Write Call back function is called\r\n");
-	int curr_write_frame = XAxiVdma_CurrFrameStore(&InstancePtr, XAXIVDMA_WRITE);
-	xil_printf("Write Call back function is called: number %d \r\n",curr_write_frame);
+	u16 current_frame = XAxiVdma_CurrFrameStore(&InstancePtr, XAXIVDMA_WRITE);
+	xil_printf("[WRITE] Stopped writing frame %d, Starting write frame %d\r\n", w_current_frame, current_frame);
+	if(current_frame != w_current_frame) {
+		w_en[w_current_frame] = 1; // Free previous frame
+		w_current_frame = current_frame;
+	}
 
+	u16 next_buffer_index = (w_current_frame + 1) % FRAME_COUNT;
+	if(w_en[next_buffer_index] == 1) {
+		w_en[next_buffer_index] = 0; // Reserve next frame
+		w_parked = 0;
+		vdma_context.WriteCfg.FixedFrameStoreAddr = next_buffer_index;
+	} else {
+		w_parked = 1;
+	}
 }
 
 /*****************************************************************************/
@@ -224,14 +267,9 @@ static void WriteCallBack(void *CallbackRef, u32 Mask)
 ******************************************************************************/
 static void WriteErrorCallBack(void *CallbackRef, u32 Mask)
 {
-
 	/* User can add his code in this call back function */
 	xil_printf("Write Call back Error function is called \r\n");
-
 }
-
-
-
 
 static int SetupIntrSystem(XAxiVdma *AxiVdmaPtr, u16 ReadIntrId, u16 WriteIntrId)
 {
