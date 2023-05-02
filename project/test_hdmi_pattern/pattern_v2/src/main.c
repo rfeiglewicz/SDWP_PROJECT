@@ -97,6 +97,8 @@ static int SetupIntrSystem(XAxiVdma *AxiVdmaPtr, u16 ReadIntrId, u16 WriteIntrId
 
 void run_save(){
 	xil_printf("[PROC] Starting processing frame %d\r\n", proc_current_frame);
+	r_en[proc_current_frame] = 0;
+	w_en[proc_current_frame] = 0;
     for(int i=0; i< (1920*1080*3/4);i++){
     	u32 temp_val = Xil_In32(vdma_context.WriteCfg.FrameStoreStartAddr[proc_current_frame] + 4*i);
 
