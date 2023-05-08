@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon May  8 21:06:13 2023
+# Process ID: 11684
+# Current directory: C:/Users/radzi/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3464
+# Log file: C:/Users/radzi/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/radzi/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On: R_Feiglewicz, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34011 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vivado_projects/2022_1/camera_filter_pipline_project/hw/hw.xpr
+update_compile_order -fileset sources_1
+archive_project C:/Users/radzi/Documents/git_sdwup/SDWP_PROJECT/project/camera_filter_pipline.xpr.zip -temp_dir C:/Users/radzi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11684-R_Feiglewicz -force -exclude_run_results

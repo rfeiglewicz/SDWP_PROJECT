@@ -1,0 +1,10 @@
+19:37:32 **** Build of configuration Debug for project pattern_v2_2_core_pr ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 49696 C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_1 C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core_pr/Debug/system.bif
+sdcard_gen --xpfm C:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core_pr/Debug/system.bif --bitstream C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core/_ide/bitstream/design_1_wrapper_3_buffers_v1.bit --elf C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core/Debug/pattern_v2_2_core.elf,ps7_cortexa9_1
+creating BOOT.BIN using C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core/_ide/bitstream/design_1_wrapper_3_buffers_v1.bit
+Running C:/Xilinx/Vitis/2022.1/bin/bootgen  -image C:/Vitis_projects/2022_1/test_hdmi_pattern/pattern_v2_2_core_pr/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+19:37:36 Build Finished (took 4s.79ms)
+

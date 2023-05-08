@@ -1,28 +1,0 @@
-2023-04-16T17:20:54.399414700255-17:20:54 **** Incremental Build of configuration Debug for project xaxivdma_example_intr_1 ****
-000-make all 
-000-make --no-print-directory pre-build
-000-a9-linaro-pre-build-step
-000-' '
-000-make --no-print-directory main-build
-000-'Building file: ../src/xaxivdma_example_intr.c'
-000-'Invoking: ARM v7 gcc compiler'
-000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xaxivdma_example_intr.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/xaxivdma_example_intr.d" -MT"src/xaxivdma_example_intr.o" -o "src/xaxivdma_example_intr.o" "../src/xaxivdma_example_intr.c"
-000/xaxivdma_example_intr_1/src/xaxivdma_example_intr.c111-1-1#warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]1-../src/xaxivdma_example_intr.c:111:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
-000-  111 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
-000-      |  ^~~~~~~
-000-'Finished building: ../src/xaxivdma_example_intr.c'
-000-' '
-000-'Building target: xaxivdma_example_intr_1.elf'
-000-'Invoking: ARM v7 gcc linker'
-000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Vitis_projects/2022_1/test_hdmi_pattern/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "xaxivdma_example_intr_1.elf"  ./src/xaxivdma_example_intr.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-000-'Finished building target: xaxivdma_example_intr_1.elf'
-000-' '
-000-'Invoking: ARM v7 Print Size'
-000-arm-none-eabi-size xaxivdma_example_intr_1.elf  |tee "xaxivdma_example_intr_1.elf.size"
-000-   text	   data	    bss	    dec	    hex	filename
-000-  40766	   2048	  25424	  68238	  10a8e	xaxivdma_example_intr_1.elf
-000-'Finished building: xaxivdma_example_intr_1.elf.size'
-000-' '
-00255-
-17:20:54 Build Finished (took 537ms)
-
