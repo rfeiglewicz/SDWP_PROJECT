@@ -3,26 +3,26 @@
   "applications": [],
   "platforms": [
     {
-      "name": "system_wrapper"
+      "name": "wrapper"
     }
   ],
   "systems": [
     {
-      "name": "cam_core_1_pipline_system",
-      "platform": "C:/Vitis_projects/2022_1/camera_digilent_pr/system_wrapper/export/system_wrapper/system_wrapper.xpfm",
-      "sysConfig": "system_wrapper",
+      "name": "pipline_1_camera_system",
+      "platform": "C:/Vitis_projects/2022_1/camera_digilent_pr/wrapper/export/wrapper/wrapper.xpfm",
+      "sysConfig": "wrapper",
       "buildConfig": "Debug",
       "applications": [
         {
-          "name": "cam_core_1_pipline",
-          "platform": "C:/Vitis_projects/2022_1/camera_digilent_pr/system_wrapper/export/system_wrapper/system_wrapper.xpfm",
-          "platformPath": "C:\\Vitis_projects\\2022_1\\camera_digilent_pr\\system_wrapper\\export\\system_wrapper",
-          "sysConfig": "system_wrapper",
-          "domain": "standalone_ps7_cortexa9_1",
-          "system": "cam_core_1_pipline_system"
+          "name": "pipline_1_camera",
+          "platform": "C:/Vitis_projects/2022_1/camera_digilent_pr/wrapper/export/wrapper/wrapper.xpfm",
+          "platformPath": "C:\\Vitis_projects\\2022_1\\camera_digilent_pr\\wrapper\\export\\wrapper",
+          "sysConfig": "wrapper",
+          "domain": "standalone_domain",
+          "system": "pipline_1_camera_system"
         }
       ],
-      "platformPath": "C:\\Vitis_projects\\2022_1\\camera_digilent_pr\\system_wrapper\\export\\system_wrapper"
+      "platformPath": "C:\\Vitis_projects\\2022_1\\camera_digilent_pr\\wrapper\\export\\wrapper"
     }
   ],
   "others": []
