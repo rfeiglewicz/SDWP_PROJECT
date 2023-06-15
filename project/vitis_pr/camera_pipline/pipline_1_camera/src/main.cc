@@ -87,8 +87,40 @@ static  int SetupIntrSystem(XAxiVdma *AxiVdmaPtr, u16 ReadIntrId, u16 WriteIntrI
 #define UART_DEVICE_ID XPAR_PS7_UART_1_DEVICE_ID
 static XUartPs Uart_Ps;
 
-#define RECV_BUFF_SIZE 32
+#define RECV_BUFF_SIZE 36
 static u8 recvBuff[RECV_BUFF_SIZE];
+
+struct Kernel {
+	/*
+	 * i0 i1 i2
+	 * i3 i4 i5
+	 * i6 i7 i8
+	 */
+
+	u32 i0;
+	u32 i1;
+	u32 i2;
+
+	u32 i3;
+	u32 i4;
+	u32 i5;
+
+	u32 i6;
+	u32 i7;
+	u32 i8;
+};
+
+void apply_kernel(struct Kernel* kernel) {
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 0, kernel->i1);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 4, kernel->i2);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 8, kernel->i3);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 16, kernel->i4);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 20, kernel->i5);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 24, kernel->i6);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 32, kernel->i7);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 36, kernel->i8);
+	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 40, kernel->i9);
+}
 
 int initialize_uart(u16 DeviceId) {
 	int Status;
@@ -117,11 +149,11 @@ int initialize_uart(u16 DeviceId) {
 
 void uart_receive() {
 	u16 size = XUartPs_Recv(&Uart_Ps, recvBuff, RECV_BUFF_SIZE);
-	if(size > 0) {
-		xil_printf("Received %d bytes from uart\n\r", size);
-		for(u16 i = 0;i < size;++i) {
-			xil_printf("%d\n\r", recvBuff[i]);
-		}
+	if(size == RECV_BUFF_SIZE) {
+		xil_printf("Received new kernel\n\r", size);
+		struct Kernel newKernel;
+		memcpy(&newKernel, recvBuff, RECV_BUFF_SIZE);
+		apply_kernel(&newKernel);
 	}
 }
 
