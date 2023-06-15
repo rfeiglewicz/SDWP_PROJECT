@@ -22,6 +22,7 @@
 #include "filter_subsystem_ctrl_ip.h"
 #include "xbram_hw.h"
 #include "xbram.h"
+#include "xuartps.h"
 
 
 
@@ -83,7 +84,46 @@ unsigned int srcBuffer = (MEMORY_BASE  + 0x10000000);
 
 static  int SetupIntrSystem(XAxiVdma *AxiVdmaPtr, u16 ReadIntrId, u16 WriteIntrId,XScuGic* IntcInstancePtr);
 
+#define UART_DEVICE_ID XPAR_PS7_UART_1_DEVICE_ID
+static XUartPs Uart_Ps;
 
+#define RECV_BUFF_SIZE 32
+static u8 recvBuff[RECV_BUFF_SIZE];
+
+int initialize_uart(u16 DeviceId) {
+	int Status;
+	XUartPs_Config *Config;
+
+	/*
+	 * Initialize the UART driver so that it's ready to use
+	 * Look up the configuration in the config table and then initialize it.
+	 */
+	Config = XUartPs_LookupConfig(DeviceId);
+	if (NULL == Config) {
+		xil_printf("Failed to lookup config uart\n\r");
+		return XST_FAILURE;
+	}
+
+	Status = XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Failed to config uart\n\r");
+		return XST_FAILURE;
+	}
+
+	XUartPs_SetBaudRate(&Uart_Ps, 115200);
+
+	return XST_SUCCESS;
+}
+
+void uart_receive() {
+	u16 size = XUartPs_Recv(&Uart_Ps, recvBuff, RECV_BUFF_SIZE);
+	if(size > 0) {
+		xil_printf("Received %d bytes from uart\n\r", size);
+		for(u16 i = 0;i < size;++i) {
+			xil_printf("%d\n\r", recvBuff[i]);
+		}
+	}
+}
 
 void run_save(){
 	//xil_printf("[PROC] Starting processing frame %d\r\n", proc_current_frame);
@@ -109,6 +149,7 @@ void run_save(){
     FILTER_SUBSYSTEM_CTRL_IP_mWriteReg(XPAR_FILTER_SUBSYSTEM_FILTER_SUBSYSTEM_CTR_0_S00_AXI_BASEADDR,FILTER_SUBSYSTEM_CTRL_IP_S00_AXI_SLV_REG0_OFFSET,1);//start
 
     //TUTAJ ODCZYT DANYCH UZYTKOWNIKA MOZNA ZROBIC
+	uart_receive();
 
 
     //xil_printf("waiting for finish frame\r\n");
@@ -209,6 +250,12 @@ int main()
 		printf("successful init kernel bram \r\n");
 	}
 
+	// Initialize uart
+	if(initialize_uart(UART_DEVICE_ID) != XST_SUCCESS) {
+    	xil_printf("Failed to initialize uart\n\r");
+    } else {
+    	xil_printf("Sucessfuly initialized uart\n\r");
+    }
 
 	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 0, (0*1024)/1);
 	XBram_WriteReg(XPAR_FILTER_SUBSYSTEM_AXI_BRAM_CTRL_0_S_AXI_BASEADDR, 4, (0*1024)/1);
