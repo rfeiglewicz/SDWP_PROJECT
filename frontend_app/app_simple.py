@@ -10,7 +10,7 @@ def get_kernel_data():
         k = max(min(i, 8191), -8192)
         k = int(k * 1024)
 
-        return_bytes += k.to_bytes(4, 'big', signed=False)
+        return_bytes += k.to_bytes(4, 'little', signed=False)
     
     return bytearray(return_bytes)
 
@@ -19,7 +19,7 @@ def get_kernel_data():
 if __name__ == "__main__":
     try:
         ser = serial.Serial()  # open serial port
-        ser.port = "COM3"
+        ser.port = "COM6"
         ser.baudrate = 115200
         ser.open()
 
