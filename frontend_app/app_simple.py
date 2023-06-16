@@ -10,12 +10,9 @@ def get_kernel_data():
         k = max(min(i, 8191), -8192)
         k = int(k * 1024)
 
-        return_bytes += k.to_bytes(4, 'big')
+        return_bytes += k.to_bytes(4, 'big', signed=False)
     
     return bytearray(return_bytes)
-
-        
-        
 
 
 
