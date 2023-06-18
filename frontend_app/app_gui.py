@@ -1,8 +1,12 @@
 from tkinter import *
 from tkinter import ttk
+from PIL import ImageTk,Image 
 import serial
 import serial.tools.list_ports
 import json
+import glob, os
+import cv2
+import numpy as np
 
 kernels = json.load(open('kernels.json'))
 
@@ -17,6 +21,25 @@ def send_data(port, data):
 
     except Exception as err:
         print(err)
+
+def apply_2d_convolution(image, kernel):
+    # Podział obrazu na kanały kolorów
+    b, g, r = cv2.split(image)
+
+    # Wykonanie splotu 2D na każdym kanale
+    b_result = cv2.filter2D(b, -1, kernel)
+    g_result = cv2.filter2D(g, -1, kernel)
+    r_result = cv2.filter2D(r, -1, kernel)
+
+    # Połączenie wynikowych kanałów w obrazek wynikowy
+    result = cv2.merge((b_result, g_result, r_result))
+
+    return result
+
+def find_images():
+    files = glob.glob("images/*.png") + glob.glob("images/*.jpg")
+    return files
+    
 
 def is_float(string):
     try:
@@ -92,6 +115,39 @@ class KernelEntry():
         self.cb.set("Custom")
 
         return frm
+
+class Preview():
+    def __init__(self, root):
+        self.img = None
+        self.frame = ttk.Frame(root, padding=10)
+        self.frame.gird()
+
+    def create_gui(self):
+        canvas = Canvas(self.frame, width = 250, height = 250)
+        canvas.grid(column=1, row=1)         
+
+        canvas2 = Canvas(self.frame, width = 250, height = 250)
+        canvas2.grid(column=2, row=1)         
+
+        preview_frame = ttk.Frame(root, padding=10)
+        preview_frame.grid(column=0, row=1)
+        images = find_images()
+        image_names = [os.path.basename(image) for image in images]
+        c = ttk.Combobox(preview_frame, 
+                state="readonly",
+                values=image_names,
+            )
+        c.grid(column=0, row=1)
+        if len(image_names) > 0:
+            c.set(image_names[0])
+
+        ttk.Button(preview_frame, text="Preview", command=lambda: send_data(c.get(), kernel_entry.get_kernel_data())).grid(column=0, row=0)
+
+def create_preview(root):
+    
+    return preview_frame
+    
+    
 
 if __name__ == "__main__":
     root = Tk()
