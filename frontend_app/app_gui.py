@@ -52,7 +52,7 @@ class KernelEntry():
                 k = max(min(float(i.get()), 8191), -8192)
                 k = int(k * 1024)
 
-                return_bytes += k.to_bytes(4, 'little', signed=False)
+                return_bytes += k.to_bytes(4, 'little', signed=True)
         except Exception as err:
             print(err)
         
