@@ -26,7 +26,7 @@ def is_float(string):
         return False
 
 def vnumber(P):
-    if is_float(P) or P == "":
+    if is_float(P) or P == "" or P == "-":
         return True
     else:
         return False
