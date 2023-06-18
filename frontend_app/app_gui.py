@@ -1,14 +1,15 @@
 from tkinter import *
 from tkinter import ttk
-import serial     
+import serial
+import serial.tools.list_ports
 import json
 
 kernels = json.load(open('kernels.json'))
 
-def send_data(data):
+def send_data(port, data):
     try:
         ser = serial.Serial()  # open serial port
-        ser.port = "COM6"
+        ser.port = port
         ser.baudrate = 115200
         ser.open()
         ser.write(data)
@@ -100,6 +101,21 @@ if __name__ == "__main__":
     kernel_entry.frame.grid(column=1,row=0)
     buttons_entry_frame = kernel_entry.create_kernels(main_frame).grid(column=0, row=0)
 
-    ttk.Button(main_frame, text="Send", command=lambda: send_data(kernel_entry.get_kernel_data())).grid(column=2, row=0)
+
+    send_frame = ttk.Frame(main_frame, padding=10)
+    send_frame.grid(column=2, row=0)
+    ports = serial.tools.list_ports.comports()
+    ports_names = []
+    for port, desc, hwid in sorted(ports):
+        ports_names.append(port)
+    c = ttk.Combobox(send_frame, 
+            state="readonly",
+            values=ports_names,
+        )
+    c.grid(column=0, row=1)
+    if len(ports_names) > 0:
+        c.set(ports_names[0])
+
+    ttk.Button(send_frame, text="Send", command=lambda: send_data(c.get(), kernel_entry.get_kernel_data())).grid(column=0, row=0)
     
     root.mainloop()
