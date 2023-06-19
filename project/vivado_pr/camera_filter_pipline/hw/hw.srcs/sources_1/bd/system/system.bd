@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCB1C850C17078390",
+      "boundary_crc": "0xD641B84E55AC71CA",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../hw.gen/sources_1/bd/system",
       "name": "system",
@@ -75,7 +75,6 @@
       "xlconstant_3": "",
       "util_vector_logic_0": "",
       "filter_subsystem": {
-        "filter_mac_wrapper_v_0": "",
         "filter_datapath_v_wr_0": "",
         "fifo_input_bram_cont_0": "",
         "axis_data_fifo_0": "",
@@ -91,7 +90,8 @@
         "c_shift_ram_0": "",
         "c_shift_ram_1": "",
         "c_shift_ram_2": "",
-        "c_shift_ram_3": ""
+        "c_shift_ram_3": "",
+        "filter_mac_wrapper_v_0": ""
       },
       "proc_sys_reset_clk_pipline": "",
       "proc_sys_reset_clk_mipi": "",
@@ -107,7 +107,8 @@
         "m00_couplers": {
           "auto_pc": ""
         }
-      }
+      },
+      "rgb_to_gray_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -232,6 +233,16 @@
         "direction": "I",
         "left": "1",
         "right": "0"
+      },
+      "grayscale_mode": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -4446,6 +4457,11 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "S_AXIS": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
           }
         },
         "ports": {
@@ -4484,29 +4500,8 @@
           "pix_out_valid_r": {
             "direction": "O"
           },
-          "s_axis_tdata1": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "s_axis_tkeep1": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "s_axis_tlast1": {
-            "direction": "I"
-          },
           "s_axis_tready1": {
             "direction": "O"
-          },
-          "s_axis_tstrb1": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "s_axis_tvalid1": {
-            "direction": "I"
           },
           "rd_clk": {
             "type": "clk",
@@ -4521,94 +4516,6 @@
           }
         },
         "components": {
-          "filter_mac_wrapper_v_0": {
-            "vlnv": "xilinx.com:module_ref:filter_mac_wrapper_v_wr:1.0",
-            "xci_name": "system_filter_mac_wrapper_v_0_0",
-            "xci_path": "ip\\system_filter_mac_wrapper_v_0_0\\system_filter_mac_wrapper_v_0_0.xci",
-            "inst_hier_path": "filter_subsystem/filter_mac_wrapper_v_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "filter_mac_wrapper_v_wr",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "FREQ_HZ": {
-                    "value": "150000000",
-                    "value_src": "ip_prop"
-                  },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "ip_prop"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "/clk_wiz_0_clk_out1",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "nreset": {
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "const_prop"
-                  }
-                }
-              },
-              "kernel_input_vec": {
-                "direction": "I",
-                "left": "95",
-                "right": "0",
-                "parameters": {
-                  "LAYERED_METADATA": {
-                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 96} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 96}",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "en": {
-                "direction": "I",
-                "parameters": {
-                  "LAYERED_METADATA": {
-                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 1}",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "last_kernel": {
-                "direction": "I",
-                "parameters": {
-                  "LAYERED_METADATA": {
-                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 1}",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "pix_out_valid_r": {
-                "direction": "O"
-              },
-              "pix_out_data_r": {
-                "direction": "O",
-                "left": "23",
-                "right": "0"
-              },
-              "pixel_input_vec": {
-                "direction": "I",
-                "left": "71",
-                "right": "0",
-                "parameters": {
-                  "LAYERED_METADATA": {
-                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 72} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 72}",
-                    "value_src": "ip_prop"
-                  }
-                }
-              }
-            }
-          },
           "filter_datapath_v_wr_0": {
             "vlnv": "xilinx.com:module_ref:filter_datapath_v_wr:1.0",
             "xci_name": "system_filter_datapath_v_wr_0_0",
@@ -5123,6 +5030,94 @@
                 "value": "96"
               }
             }
+          },
+          "filter_mac_wrapper_v_0": {
+            "vlnv": "xilinx.com:module_ref:filter_mac_wrapper_v_wr:1.0",
+            "xci_name": "system_filter_mac_wrapper_v_0_0",
+            "xci_path": "ip\\system_filter_mac_wrapper_v_0_0\\system_filter_mac_wrapper_v_0_0.xci",
+            "inst_hier_path": "filter_subsystem/filter_mac_wrapper_v_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "filter_mac_wrapper_v_wr",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "150000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_0_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "nreset": {
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "const_prop"
+                  }
+                }
+              },
+              "kernel_input_vec": {
+                "direction": "I",
+                "left": "95",
+                "right": "0",
+                "parameters": {
+                  "LAYERED_METADATA": {
+                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 96} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 96}",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "en": {
+                "direction": "I",
+                "parameters": {
+                  "LAYERED_METADATA": {
+                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 1}",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "last_kernel": {
+                "direction": "I",
+                "parameters": {
+                  "LAYERED_METADATA": {
+                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 1}",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "pix_out_valid_r": {
+                "direction": "O"
+              },
+              "pix_out_data_r": {
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "pixel_input_vec": {
+                "direction": "I",
+                "left": "71",
+                "right": "0",
+                "parameters": {
+                  "LAYERED_METADATA": {
+                    "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency data_bitwidth format long minimum {} maximum {}} value 72} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} DATA_WIDTH 72}",
+                    "value_src": "ip_prop"
+                  }
+                }
+              }
+            }
           }
         },
         "interface_nets": {
@@ -5137,6 +5132,12 @@
               "S_AXI",
               "axi_bram_ctrl_0/S_AXI"
             ]
+          },
+          "Conn3": {
+            "interface_ports": [
+              "S_AXIS",
+              "axis_data_fifo_0/S_AXIS"
+            ]
           }
         },
         "nets": {
@@ -5144,7 +5145,6 @@
             "ports": [
               "ap_clk",
               "fifo_input_bram_cont_0/clk",
-              "filter_mac_wrapper_v_0/clk",
               "input_matrix_bram/clkb",
               "input_matrix_bram/clka",
               "input_matrix_bram1/clkb",
@@ -5155,17 +5155,18 @@
               "c_shift_ram_0/CLK",
               "c_shift_ram_1/CLK",
               "c_shift_ram_2/CLK",
-              "c_shift_ram_3/CLK"
+              "c_shift_ram_3/CLK",
+              "filter_mac_wrapper_v_0/clk"
             ]
           },
           "ap_rst_n_1": {
             "ports": [
               "ap_rst_n",
               "fifo_input_bram_cont_0/resetn",
-              "filter_mac_wrapper_v_0/nreset",
               "util_vector_logic_0/Op1",
               "filtering_control_un_0/resetn",
-              "filter_subsystem_ctr_0/resetn"
+              "filter_subsystem_ctr_0/resetn",
+              "filter_mac_wrapper_v_0/nreset"
             ]
           },
           "axi_bram_ctrl_0_bram_addr_a": {
@@ -5208,12 +5209,6 @@
             "ports": [
               "axis_data_fifo_0/m_axis_tvalid",
               "fifo_input_bram_cont_0/fifo_bram_tready"
-            ]
-          },
-          "axis_data_fifo_0_s_axis_tready": {
-            "ports": [
-              "axis_data_fifo_0/s_axis_tready",
-              "s_axis_tready1"
             ]
           },
           "c_shift_ram_0_Q": {
@@ -5401,36 +5396,6 @@
             "ports": [
               "s_axis_aresetn",
               "axis_data_fifo_0/s_axis_aresetn"
-            ]
-          },
-          "s_axis_tdata1_1": {
-            "ports": [
-              "s_axis_tdata1",
-              "axis_data_fifo_0/s_axis_tdata"
-            ]
-          },
-          "s_axis_tkeep1_1": {
-            "ports": [
-              "s_axis_tkeep1",
-              "axis_data_fifo_0/s_axis_tkeep"
-            ]
-          },
-          "s_axis_tlast1_1": {
-            "ports": [
-              "s_axis_tlast1",
-              "axis_data_fifo_0/s_axis_tlast"
-            ]
-          },
-          "s_axis_tstrb1_1": {
-            "ports": [
-              "s_axis_tstrb1",
-              "axis_data_fifo_0/s_axis_tstrb"
-            ]
-          },
-          "s_axis_tvalid1_1": {
-            "ports": [
-              "s_axis_tvalid1",
-              "axis_data_fifo_0/s_axis_tvalid"
             ]
           },
           "util_vector_logic_0_Res": {
@@ -5979,6 +5944,12 @@
             ]
           }
         }
+      },
+      "rgb_to_gray_0": {
+        "vlnv": "xilinx.com:hls:rgb_to_gray:3.0",
+        "xci_name": "system_rgb_to_gray_0_2",
+        "xci_path": "ip\\system_rgb_to_gray_0_2\\system_rgb_to_gray_0_2.xci",
+        "inst_hier_path": "rgb_to_gray_0"
       }
     },
     "interface_nets": {
@@ -6034,6 +6005,12 @@
         "interface_ports": [
           "dphy_hs_clock",
           "MIPI_D_PHY_RX_0/dphy_hs_clock"
+        ]
+      },
+      "pixel_dma_in_0_axis_pixel_out": {
+        "interface_ports": [
+          "pixel_dma_in_0/axis_pixel_out",
+          "rgb_to_gray_0/in_stream"
         ]
       },
       "pixel_dma_in_0_m_axi_gmem": {
@@ -6132,6 +6109,12 @@
           "rgb2dvi_0/TMDS"
         ]
       },
+      "rgb_to_gray_0_out_stream": {
+        "interface_ports": [
+          "rgb_to_gray_0/out_stream",
+          "filter_subsystem/S_AXIS"
+        ]
+      },
       "v_axi4s_vid_out_0_vid_io_out": {
         "interface_ports": [
           "rgb2dvi_0/RGB",
@@ -6185,12 +6168,6 @@
         "ports": [
           "MIPI_D_PHY_RX_0/RxByteClkHS",
           "MIPI_CSI_2_RX_0/RxByteClkHS"
-        ]
-      },
-      "Net": {
-        "ports": [
-          "filter_subsystem/s_axis_tready1",
-          "pixel_dma_in_0/axis_pixel_out_TREADY"
         ]
       },
       "PixelClk_Generator_clk_out1": {
@@ -6263,7 +6240,8 @@
           "axi_mem_intercon_2/ACLK",
           "axi_mem_intercon_2/S00_ACLK",
           "axi_mem_intercon_2/M00_ACLK",
-          "axi_mem_intercon_2/S01_ACLK"
+          "axi_mem_intercon_2/S01_ACLK",
+          "rgb_to_gray_0/ap_clk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -6321,6 +6299,12 @@
           "util_vector_logic_0/Op1"
         ]
       },
+      "grayscale_mode_0_1": {
+        "ports": [
+          "grayscale_mode",
+          "rgb_to_gray_0/grayscale_mode"
+        ]
+      },
       "mm_clk_150": {
         "ports": [
           "clk_wiz_0/clk_vdma_data",
@@ -6341,36 +6325,6 @@
           "axi_vdma_0/s_axis_s2mm_aclk",
           "axi_vdma_0/m_axi_s2mm_aclk",
           "rst_clk_wiz_vdma_data/slowest_sync_clk"
-        ]
-      },
-      "pixel_dma_in_0_axis_pixel_out_TDATA": {
-        "ports": [
-          "pixel_dma_in_0/axis_pixel_out_TDATA",
-          "filter_subsystem/s_axis_tdata1"
-        ]
-      },
-      "pixel_dma_in_0_axis_pixel_out_TKEEP": {
-        "ports": [
-          "pixel_dma_in_0/axis_pixel_out_TKEEP",
-          "filter_subsystem/s_axis_tkeep1"
-        ]
-      },
-      "pixel_dma_in_0_axis_pixel_out_TLAST": {
-        "ports": [
-          "pixel_dma_in_0/axis_pixel_out_TLAST",
-          "filter_subsystem/s_axis_tlast1"
-        ]
-      },
-      "pixel_dma_in_0_axis_pixel_out_TSTRB": {
-        "ports": [
-          "pixel_dma_in_0/axis_pixel_out_TSTRB",
-          "filter_subsystem/s_axis_tstrb1"
-        ]
-      },
-      "pixel_dma_in_0_axis_pixel_out_TVALID": {
-        "ports": [
-          "pixel_dma_in_0/axis_pixel_out_TVALID",
-          "filter_subsystem/s_axis_tvalid1"
         ]
       },
       "pixel_dma_in_0_interrupt": {
@@ -6401,7 +6355,8 @@
           "axi_mem_intercon_2/S00_ARESETN",
           "axi_mem_intercon_2/M00_ARESETN",
           "axi_mem_intercon_2/ARESETN",
-          "axi_mem_intercon_2/S01_ARESETN"
+          "axi_mem_intercon_2/S01_ARESETN",
+          "rgb_to_gray_0/ap_rst_n"
         ]
       },
       "proc_sys_reset_0_peripheral_reset": {

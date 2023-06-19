@@ -1,7 +1,7 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
-typedef ap_axiu<24, 1, 0, 0> AXI_STREAM;
+typedef ap_axiu<32, 1, 0, 0> AXI_STREAM;
 typedef ap_ufixed<16, 8> grayscale_value_t;
 
 void rgb_to_gray(hls::stream<AXI_STREAM>& in_stream, hls::stream<AXI_STREAM>& out_stream, bool grayscale_mode) {

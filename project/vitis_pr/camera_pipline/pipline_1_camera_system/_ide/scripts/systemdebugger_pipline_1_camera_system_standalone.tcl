@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B04DAAA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B04DAAA-23727093-0"}
-fpga -file C:/Vitis_projects/2022_1/camera_digilent_pr/pipline_1_camera/_ide/bitstream/final_filtering_pipline_150MHz_wrapper.bit
+fpga -file C:/Vitis_projects/2022_1/camera_digilent_pr/pipline_1_camera/_ide/bitstream/system_wrapper_grayscale_back.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/Vitis_projects/2022_1/camera_digilent_pr/wrapper/export/wrapper/hw/final_filtering_pipline_150MHz_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/Vitis_projects/2022_1/camera_digilent_pr/wrapper/export/wrapper/hw/system_wrapper_grayscale_back.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source C:/Vitis_projects/2022_1/camera_digilent_pr/pipline_1_camera/_ide/psinit/ps7_init.tcl

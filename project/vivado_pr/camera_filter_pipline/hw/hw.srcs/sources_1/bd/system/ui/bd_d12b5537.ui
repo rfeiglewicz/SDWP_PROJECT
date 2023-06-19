@@ -1,38 +1,26 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.717936",
-   "Default View_TopLeft":"3694,3595",
+   "Default View_TopLeft":"2172,3365",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 3270 -defaultsOSRD
 preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 4080 -defaultsOSRD
-preplace port port-id_empty -pg 1 -lvl 9 -x 6700 -y 3880 -defaultsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x 0 -y 3690 -defaultsOSRD
+preplace port port-id_empty -pg 1 -lvl 9 -x 6680 -y 3880 -defaultsOSRD
 preplace port port-id_rd_en -pg 1 -lvl 0 -x 0 -y 4221 -defaultsOSRD
 preplace port port-id_ap_clk -pg 1 -lvl 0 -x 0 -y 3790 -defaultsOSRD
 preplace port port-id_ap_rst_n -pg 1 -lvl 0 -x 0 -y 3760 -defaultsOSRD
 preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 3300 -defaultsOSRD
 preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 3330 -defaultsOSRD
-preplace port port-id_pix_out_valid_r -pg 1 -lvl 9 -x 6700 -y 3820 -defaultsOSRD
-preplace port port-id_s_axis_tlast1 -pg 1 -lvl 0 -x 0 -y 3640 -defaultsOSRD
-preplace port port-id_s_axis_tready1 -pg 1 -lvl 9 -x 6700 -y 3590 -defaultsOSRD
-preplace port port-id_s_axis_tvalid1 -pg 1 -lvl 0 -x 0 -y 3700 -defaultsOSRD
-preplace port port-id_done -pg 1 -lvl 9 -x 6700 -y 4180 -defaultsOSRD
-preplace port port-id_start_filter -pg 1 -lvl 9 -x 6700 -y 3940 -defaultsOSRD
-preplace port port-id_bram_en_a -pg 1 -lvl 9 -x 6700 -y 3510 -defaultsOSRD
+preplace port port-id_pix_out_valid_r -pg 1 -lvl 9 -x 6680 -y 3820 -defaultsOSRD
+preplace port port-id_s_axis_tready1 -pg 1 -lvl 9 -x 6680 -y 3590 -defaultsOSRD
 preplace port port-id_rd_clk -pg 1 -lvl 0 -x 0 -y 3820 -defaultsOSRD
 preplace port port-id_rd_rst -pg 1 -lvl 0 -x 0 -y 4050 -defaultsOSRD
 preplace port port-id_s_axis_aresetn -pg 1 -lvl 0 -x 0 -y 3730 -defaultsOSRD
-preplace portBus dout -pg 1 -lvl 9 -x 6700 -y 4210 -defaultsOSRD
-preplace portBus pix_out_data_r -pg 1 -lvl 9 -x 6700 -y 3790 -defaultsOSRD
-preplace portBus s_axis_tdata1 -pg 1 -lvl 0 -x 0 -y 3580 -defaultsOSRD
-preplace portBus s_axis_tkeep1 -pg 1 -lvl 0 -x 0 -y 3610 -defaultsOSRD
-preplace portBus s_axis_tstrb1 -pg 1 -lvl 0 -x 0 -y 3670 -defaultsOSRD
-preplace portBus image_width_out -pg 1 -lvl 9 -x 6700 -y 3910 -defaultsOSRD
-preplace portBus image_height_out -pg 1 -lvl 9 -x 6700 -y 3850 -defaultsOSRD
-preplace portBus bram_wrdata_a -pg 1 -lvl 9 -x 6700 -y 3480 -defaultsOSRD
-preplace portBus bram_addr_a -pg 1 -lvl 9 -x 6700 -y 3230 -defaultsOSRD
-preplace inst filter_mac_wrapper_v_0 -pg 1 -lvl 7 -x 6160 -y 3870 -defaultsOSRD
+preplace portBus dout -pg 1 -lvl 9 -x 6680 -y 4210 -defaultsOSRD
+preplace portBus pix_out_data_r -pg 1 -lvl 9 -x 6680 -y 3790 -defaultsOSRD
 preplace inst filter_datapath_v_wr_0 -pg 1 -lvl 4 -x 5240 -y 3820 -defaultsOSRD
 preplace inst fifo_input_bram_cont_0 -pg 1 -lvl 2 -x 4160 -y 3720 -defaultsOSRD
 preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 3620 -y 3720 -defaultsOSRD
@@ -44,63 +32,59 @@ preplace inst fifo_generator_0 -pg 1 -lvl 8 -x 6520 -y 4050 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 7 -x 6160 -y 4300 -defaultsOSRD
 preplace inst filtering_control_un_0 -pg 1 -lvl 3 -x 4810 -y 3810 -defaultsOSRD
 preplace inst filter_subsystem_ctr_0 -pg 1 -lvl 3 -x 4810 -y 4240 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 6 -x 5770 -y 3270 -defaultsOSRD
-preplace inst c_shift_ram_0 -pg 1 -lvl 6 -x 5770 -y 3990 -defaultsOSRD
-preplace inst c_shift_ram_1 -pg 1 -lvl 6 -x 5770 -y 3870 -defaultsOSRD
-preplace inst c_shift_ram_2 -pg 1 -lvl 6 -x 5770 -y 3750 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 6 -x 5780 -y 3270 -defaultsOSRD
+preplace inst c_shift_ram_0 -pg 1 -lvl 6 -x 5780 -y 3990 -defaultsOSRD
+preplace inst c_shift_ram_1 -pg 1 -lvl 6 -x 5780 -y 3870 -defaultsOSRD
+preplace inst c_shift_ram_2 -pg 1 -lvl 6 -x 5780 -y 3750 -defaultsOSRD
 preplace inst c_shift_ram_3 -pg 1 -lvl 5 -x 5520 -y 4010 -defaultsOSRD
-preplace netloc ap_clk_1 1 0 8 30 3870 3810 3840 4360 4110 NJ 4110 5410 4080 5660 3630 5960 4090 NJ
-preplace netloc ap_rst_n_1 1 0 7 40 3550 3830 3610 4310 3620 NJ 3620 N 3620 N 3620 5880
-preplace netloc axi_bram_ctrl_0_bram_addr_a 1 4 5 N 3290 5670 3200 N 3200 NJ 3200 6680J
-preplace netloc axi_bram_ctrl_0_bram_clk_a 1 4 3 N 3310 5670 3330 5880
-preplace netloc axi_bram_ctrl_0_bram_en_a 1 4 5 N 3350 N 3350 5970 3190 NJ 3190 6670
-preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 4 5 N 3330 5620 3340 5960 3210 NJ 3210 6660J
-preplace netloc axis_data_fifo_0_almost_empty 1 1 1 3820 3750n
-preplace netloc axis_data_fifo_0_m_axis_tdata 1 1 6 3790 3590 NJ 3590 NJ 3590 NJ 3590 N 3590 N
-preplace netloc axis_data_fifo_0_m_axis_tvalid 1 1 1 3790 3740n
-preplace netloc axis_data_fifo_0_s_axis_tready 1 0 9 100 3560 NJ 3560 NJ 3560 NJ 3560 NJ 3560 N 3560 5970 3750 6360J 3590 NJ
+preplace inst filter_mac_wrapper_v_0 -pg 1 -lvl 7 -x 6160 -y 3870 -defaultsOSRD
+preplace netloc ap_clk_1 1 0 8 50 3820 3800 3830 4370 4090 NJ 4090 5410 4080 5650 3660 5940 3760 6340J
+preplace netloc ap_rst_n_1 1 0 7 40 3620 3810 3610 4310 3640 NJ 3640 N 3640 N 3640 5900
+preplace netloc axi_bram_ctrl_0_bram_addr_a 1 4 2 5400 3270 N
+preplace netloc axi_bram_ctrl_0_bram_clk_a 1 4 3 N 3310 5660 3330 5920
+preplace netloc axi_bram_ctrl_0_bram_en_a 1 4 3 N 3350 N 3350 N
+preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 4 3 N 3330 5620 3340 5940
+preplace netloc axis_data_fifo_0_almost_empty 1 1 1 3790 3750n
+preplace netloc axis_data_fifo_0_m_axis_tdata 1 1 6 3770 3590 NJ 3590 NJ 3590 NJ 3590 N 3590 N
+preplace netloc axis_data_fifo_0_m_axis_tvalid 1 1 1 3780 3740n
+preplace netloc c_shift_ram_0_Q 1 6 1 5930 3920n
+preplace netloc c_shift_ram_1_Q 1 6 1 5880 3870n
+preplace netloc c_shift_ram_2_Q 1 6 1 5890 3750n
+preplace netloc c_shift_ram_3_Q 1 5 2 5660 3680 5910J
 preplace netloc fifo_generator_0_dout 1 7 2 6380 4210 NJ
 preplace netloc fifo_generator_0_empty 1 7 2 6380 3880 NJ
-preplace netloc fifo_input_bram_cont_0_addr_a 1 2 5 4300 3940 NJ 3940 NJ 3940 5630 3550 N
-preplace netloc fifo_input_bram_cont_0_pix_ctrl_ack 1 2 1 4350 3700n
-preplace netloc fifo_input_bram_cont_0_we_a 1 1 6 3800 3830 4340 3930 NJ 3930 NJ 3930 5640 3610 N
-preplace netloc filter_mac_wrapper_v_0_pix_out_data_r 1 7 2 6370 3830 6680J
-preplace netloc filter_mac_wrapper_v_0_pix_out_valid_r 1 7 2 6360 3820 NJ
-preplace netloc filter_subsystem_ctr_0_image_height_out 1 2 7 4380 3980 5020 3640 NJ 3640 N 3640 5950 3760 NJ 3760 6660
-preplace netloc filter_subsystem_ctr_0_image_width_out 1 2 7 4370 3970 4990 3650 NJ 3650 N 3650 5930 3980 6340J 3870 6680
-preplace netloc filter_subsystem_ctr_0_start_filter 1 2 7 4390 3990 5050 3660 NJ 3660 N 3660 5900 3990 6350J 3890 6670
-preplace netloc filtering_control_un_0_addr 1 3 4 4970 3600 NJ 3600 N 3600 5980
-preplace netloc filtering_control_un_0_done 1 2 7 4390 4130 5000 4220 NJ 4220 N 4220 N 4220 NJ 4220 6670J
-preplace netloc filtering_control_un_0_new_line 1 1 3 3840 3950 NJ 3950 4970
-preplace netloc filtering_control_un_0_offset 1 3 1 5010 3770n
-preplace netloc filtering_control_un_0_req_pix 1 1 3 3830 3960 NJ 3960 4980
-preplace netloc input_matrix_bram1_doutb 1 3 4 5060 3430 NJ 3430 N 3430 N
-preplace netloc input_matrix_bram_doutb 1 3 4 5070 3670 NJ 3670 N 3670 5940
-preplace netloc rd_clk_1 1 0 8 60 3570 NJ 3570 NJ 3570 NJ 3570 NJ 3570 N 3570 5910 4130 NJ
-preplace netloc rd_en_1 1 0 8 60J 4090 NJ 4090 NJ 4090 NJ 4090 NJ 4090 5670 4070 N 4070 NJ
-preplace netloc rd_rst_1 1 0 8 NJ 4050 NJ 4050 NJ 4050 4970J 4100 NJ 4100 N 4100 5870 4120 6360J
+preplace netloc fifo_input_bram_cont_0_addr_a 1 2 5 4340 3550 NJ 3550 NJ 3550 N 3550 N
+preplace netloc fifo_input_bram_cont_0_pix_ctrl_ack 1 2 1 4360 3700n
+preplace netloc fifo_input_bram_cont_0_we_a 1 1 6 3770 3840 4350 3940 NJ 3940 NJ 3940 5630 3610 N
+preplace netloc filter_datapath_v_wr_0_output_vec_c 1 4 2 N 3820 5620
+preplace netloc filter_mac_wrapper_v_0_pix_out_data_r 1 7 2 6360 3790 NJ
+preplace netloc filter_mac_wrapper_v_0_pix_out_valid_r 1 7 2 6370 3820 NJ
+preplace netloc filter_subsystem_ctr_0_image_height_out 1 2 2 4400 3960 4990
+preplace netloc filter_subsystem_ctr_0_image_width_out 1 2 2 4380 3970 4970
+preplace netloc filter_subsystem_ctr_0_start_filter 1 2 2 4390 3980 4980
+preplace netloc filtering_control_un_0_addr 1 3 4 5010 3650 NJ 3650 N 3650 5920
+preplace netloc filtering_control_un_0_done 1 2 2 4400 3990 5000
+preplace netloc filtering_control_un_0_en 1 3 3 5030 3740 NJ 3740 N
+preplace netloc filtering_control_un_0_last_kernel 1 3 3 5040J 3750 N 3750 5640
+preplace netloc filtering_control_un_0_new_line 1 1 3 3820 3950 NJ 3950 4970
+preplace netloc filtering_control_un_0_offset 1 3 1 5020 3770n
+preplace netloc filtering_control_un_0_req_pix 1 1 3 3810 3930 NJ 3930 4980
+preplace netloc input_matrix_bram1_doutb 1 3 4 5050 3430 NJ 3430 N 3430 N
+preplace netloc input_matrix_bram_doutb 1 3 4 5060 3670 NJ 3670 N 3670 5920
+preplace netloc rd_clk_1 1 0 8 30 3600 NJ 3600 NJ 3600 NJ 3600 NJ 3600 N 3600 5930 3750 6350J
+preplace netloc rd_en_1 1 0 8 40J 4100 NJ 4100 NJ 4100 NJ 4100 NJ 4100 5660 4070 N 4070 NJ
+preplace netloc rd_rst_1 1 0 8 NJ 4050 NJ 4050 NJ 4050 5030J 4110 NJ 4110 N 4110 5880 4150 NJ
 preplace netloc s_axi_aclk_1 1 0 4 NJ 3300 NJ 3300 4320J 3310 NJ
 preplace netloc s_axi_aresetn_1 1 0 4 NJ 3330 NJ 3330 4330J 3330 NJ
-preplace netloc s_axis_aresetn_1 1 0 1 20 3730n
-preplace netloc s_axis_tdata1_1 1 0 1 90J 3580n
-preplace netloc s_axis_tkeep1_1 1 0 1 80J 3610n
-preplace netloc s_axis_tlast1_1 1 0 1 70J 3640n
-preplace netloc s_axis_tstrb1_1 1 0 1 50J 3670n
-preplace netloc s_axis_tvalid1_1 1 0 1 30J 3700n
+preplace netloc s_axis_aresetn_1 1 0 1 20 3710n
 preplace netloc util_vector_logic_0_Res 1 7 1 6370 4110n
-preplace netloc xlslice_1_Dout 1 6 1 5980 3270n
-preplace netloc c_shift_ram_0_Q 1 6 1 5870 3920n
-preplace netloc filter_datapath_v_wr_0_output_vec_c 1 4 2 N 3820 5620
-preplace netloc c_shift_ram_1_Q 1 6 1 5870 3870n
-preplace netloc filtering_control_un_0_last_kernel 1 3 3 5040J 3750 N 3750 5650
-preplace netloc c_shift_ram_2_Q 1 6 1 5890 3750n
-preplace netloc filtering_control_un_0_en 1 3 3 5030 3740 NJ 3740 N
-preplace netloc c_shift_ram_3_Q 1 5 2 5670 3680 5920J
 preplace netloc xlslice_0_Dout 1 4 1 5400 4000n
+preplace netloc xlslice_1_Dout 1 6 1 5920 3270n
 preplace netloc Conn1 1 0 3 NJ 4080 NJ 4080 4300J
-preplace netloc Conn2 1 0 4 NJ 3270 NJ 3270 NJ 3270 5070J
-levelinfo -pg 1 0 3620 4160 4810 5240 5520 5770 6160 6520 6700
-pagesize -pg 1 -db -bbox -sgen -170 -240 6900 4610
+preplace netloc Conn2 1 0 4 NJ 3270 NJ 3270 NJ 3270 5060J
+preplace netloc Conn3 1 0 1 N 3690
+levelinfo -pg 1 0 3620 4160 4810 5240 5520 5780 6160 6520 6680
+pagesize -pg 1 -db -bbox -sgen -140 -240 6860 4610
 "
 }
 0

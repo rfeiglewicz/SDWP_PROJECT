@@ -1,13 +1,7 @@
-2023-06-14T13:13:16.447152600255-13:13:16 **** Build of project wrapper ****
-000-buildplatform.bat 51580 wrapper  
-000-XSDB Server Channel: tcfchan#2
-000-Cleaning the zynq_fsbl application.
-000-rm -rf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  rsa.o  nor.o  qspi.o  ps7_init.o  pcap.o  fsbl_handoff.o zynq
-000-_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
-000-
-000-rm: nie mo¿na wykonaæ lstat na `*.o': Invalid argument
+2023-06-19T08:49:46.533545200255-08:49:46 **** Build of project wrapper ****
+000-buildplatform.bat 50511 wrapper  
+000-XSDB Server Channel: tcfchan#8
 000-Building the zynq_fsbl application.
-000/wrapper0-1-1make: *** [Makefile:42: clean] Error 12-make: *** [Makefile:42: clean] Error 1
 000-make: Entering directory 'C:/Vitis_projects/2022_1/camera_digilent_pr/wrapper/zynq_fsbl/zynq_fsbl_bsp'
 000-
 000-make --no-print-directory seq_libs
@@ -446,11 +440,11 @@
 000-
 000-"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_15/src"
 000-
+000-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+000-
 000-make -C ps7_cortexa9_0/libsrc/iicps_v3_15/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
 000-RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
 000-files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
-000-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
 000-
 000-make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
 000-RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
@@ -567,6 +561,9 @@
 000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
 000-cortexa9_0/include -I.
 000-
+000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+000-rtexa9_0/include -I.
+000-
 000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c image_mover.c -o image_mover.o -Izynq
 000-_fsbl_bsp/ps7_cortexa9_0/include -I.
 000-
@@ -580,9 +577,6 @@
 000-cortexa9_0/include -I.
 000-
 000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_co
-000-rtexa9_0/include -I.
-000-
-000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
 000-rtexa9_0/include -I.
 000-
 000-arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
@@ -1118,5 +1112,5 @@
 000-'Finished building libraries'
 000-
 00255-
-13:13:41 Build Finished (took 25s.331ms)
+08:50:01 Build Finished (took 14s.830ms)
 

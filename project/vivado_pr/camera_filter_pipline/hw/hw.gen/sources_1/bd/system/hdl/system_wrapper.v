@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Tue Jun 13 15:55:56 2023
+//Date        : Mon Jun 19 08:36:03 2023
 //Host        : R_Feiglewicz running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -42,6 +42,7 @@ module system_wrapper
     dphy_data_lp_p,
     dphy_hs_clock_clk_n,
     dphy_hs_clock_clk_p,
+    grayscale_mode,
     hdmi_tx_clk_n,
     hdmi_tx_clk_p,
     hdmi_tx_data_n,
@@ -78,6 +79,7 @@ module system_wrapper
   input [1:0]dphy_data_lp_p;
   input dphy_hs_clock_clk_n;
   input dphy_hs_clock_clk_p;
+  input grayscale_mode;
   output hdmi_tx_clk_n;
   output hdmi_tx_clk_p;
   output [2:0]hdmi_tx_data_n;
@@ -124,6 +126,7 @@ module system_wrapper
   wire [1:0]dphy_data_lp_p;
   wire dphy_hs_clock_clk_n;
   wire dphy_hs_clock_clk_p;
+  wire grayscale_mode;
   wire hdmi_tx_clk_n;
   wire hdmi_tx_clk_p;
   wire [2:0]hdmi_tx_data_n;
@@ -183,6 +186,7 @@ module system_wrapper
         .dphy_data_lp_p(dphy_data_lp_p),
         .dphy_hs_clock_clk_n(dphy_hs_clock_clk_n),
         .dphy_hs_clock_clk_p(dphy_hs_clock_clk_p),
+        .grayscale_mode(grayscale_mode),
         .hdmi_tx_clk_n(hdmi_tx_clk_n),
         .hdmi_tx_clk_p(hdmi_tx_clk_p),
         .hdmi_tx_data_n(hdmi_tx_data_n),
